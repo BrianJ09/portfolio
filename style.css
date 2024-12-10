@@ -401,7 +401,7 @@ h2{
 .contact{
     width: 100%;
     height: 65vh;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url(webBg4.png);
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url(WEBbg4.png);
     background-size: contain;
     background-position: center;
     display: flex;
