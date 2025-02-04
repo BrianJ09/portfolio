@@ -395,7 +395,7 @@ h2{
 }
 
 .sect2024{
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), url('msBG3.PNG');
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), url('msBG3.png');
     background-size: cover;
     background-position: center;
 }
@@ -406,7 +406,7 @@ h2{
 }
 
 .sect2025{
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), url('msBG4.PNG');
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), url('msBG4.png');
     background-size: cover;
     background-position: center;
 }
