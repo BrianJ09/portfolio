@@ -36,6 +36,7 @@
 }
 
 
+
 /*header*/
 header{
     width: 100%;
@@ -280,7 +281,12 @@ h2{
 
 .skillspara{
     color: white;
-    text-align: center
+    text-align: center;
+    
+}
+
+.logoTitle{
+    font-size: 10;
 }
 
 .logos{
