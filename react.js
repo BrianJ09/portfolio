@@ -3,7 +3,6 @@
     padding: 0;
     font-family: "Parkinsans", Verdana, Geneva, Tahoma, sans-serif;
     scroll-behavior: smooth;
-    box-sizing: border-box;
 }
 
 @font-face {
@@ -11,6 +10,18 @@
     src: url('ahsing-regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
+}
+
+@keyframes backgroundAnimation{
+    0%{
+        background-position: 0%, 0%;
+    }
+    50%{
+        background-position: 100%, 100%;
+    }
+    100%{
+        background-position: 0%, 0%;
+    }
 }
 
 @keyframes bgSwitchPandemonium{
@@ -95,162 +106,161 @@ ul li a:hover{
 
 /*HOME*/
 .home{
-    background: linear-gradient(135deg, rgba(0,0,0,1), rgba(0,0,0,1));
+    padding-top: 10vh;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), url(HOMEBG.png);
     height: 90vh;
     background-size: 1%;
     align-content: center;
-    text-align: center;
-    z-index: -1;
-}
-
-.image-grid{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    width: 100%;
-    max-width: 1200px;
-    margin-bottom: 20px;
-    background-color: black;
-    opacity: 50%;
-    overflow: hidden;
-    z-index: 0;
-    position: relative;
-    margin: 0 auto;
-}
-
-.image-row{
-    display: flex;
-    gap: 10px;
-    rotate: 25deg;
-    overflow: hidden;
-    z-index: -1;
-}
-
-.image-row {
-    transition: transform 0.3s ease-out;
-}
-
-.image{
-    flex: 1;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    z-index: -1;
-}
-
-.nametitle,
-.slogan,
-.subslogan{
-    position: absolute;
-    z-index: 1;
-    text-align: center;
-    width: 100%;
-    text-shadow: 0 0 10px rgb(2, 193, 196);
+    animation: backgroundAnimation 40s infinite;
 }
 
 h1{
     text-align: center;
     font-family: 'ahsing';
     color: white;
-    white-space: nowrap;
-    overflow: hidden;
     font-size: 100;
-    font-weight: lighter;
-    top: 45%;
     text-shadow: 0 0 10px rgba(179, 236, 255, 0.3)
 }
 .slogan{
     text-align: center;
     color: white;
-    top: 57%;
     font-weight: 500;
 }
 
 .subslogan{
     text-align: center;
     color: lightblue;
-    top: 60%;
     font-weight: 1000;
+}
+
+.noscroll {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.intro {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../../../assets/noise.png);
+  background-size: 250px;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.gridMotion-container {
+  gap: 1rem;
+  flex: none;
+  position: relative;
+  width: 150vw;
+  height: 150vh;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 100%;
+  transform: rotate(-15deg);
+  transform-origin: center center;
+  z-index: 2;
+}
+
+.row {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(7, 1fr);
+  will-change: transform, filter;
+}
+
+.row__item {
+  position: relative;
+}
+
+.row__item-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.row__item-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.row__item-content {
+  padding: 1rem;
+  text-align: center;
+  z-index: 1;
+}
+
+.fullview {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.fullview .row__item-inner {
+  border-radius: 0px;
 }
 
 
 /*ABOUTME*/
 .aboutme{
     background-color: black;
-    height: 750vh;
-    z-index: 1;
-    position: relative;
+    height: 540vh;
 }
 
 .abtdiv{
     width: 100%;
-    height: 100vh;
-    background: url(HomeImage7.PNG);
+    height: 70vh;
+    background: url(WEBbg2.png);
     background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
+    background-size: contain;
 }
 
 h2{
     text-align: center;
     font-family: 'ahsing';
     font-size: 50px;
-    text-shadow: 0 0 5px rgb(0, 0, 0);
+    text-shadow: 0 0 5px rgb(103, 167, 255);
     color: white;
-    font-weight: lighter;
-    padding: 5px;
 }
 
 .abtsect{
-    height: 50%;
+    background-color: midnightblue;
+    margin: 20px;
+    border-radius: 50px;
+    padding: 50px;
+    height: 40vh;
     align-content: center;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
 }
-
-.abtTab{
-    text-align: center;
-    width: 70%;
-    padding: 10px;
-    margin: 10px;
-    background-color: rgba(255,255,255,0.3);
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(255,255,255,1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    transition: 0.5s;
-}
-
-.abtsect .abtTab{
-    width: 50%;
-}
-
-.abtTab:hover{
-    background-color: rgba(255,255,255,0.7);
-    box-shadow: 0 0 20px rgba(0,0,0,1);
-    transition: 0.5s;
-}
-
-.tabHeader{
-    color: midnightblue;
-    font-size: 20;
-    text-shadow: 0 0 5px rgba(255,255,255,1);
-}
-
-.tabPara{
-    color: black;
-    font-size: 15;
-    text-shadow: 0 0 10px rgba(255,255,255,1);
-}
-
 
 .abtpara{
     color: white;
@@ -313,7 +323,7 @@ h2{
 
 
 /*MILESTONES*/
-/* .milestonediv{
+.milestonediv{
     display: flex;
     align-items: flex-start;
     position: relative;
@@ -363,86 +373,6 @@ h2{
 
 .milestonePara{
     color: white
-} */
-
-.milestonediv{
-    height: 500vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.overallSect, .sect2023, .sect2024, .sect2025, .endingSect{
-    min-height: 100vh;
-    align-content: center;
-    position: sticky;
-    top: 0;
-    background-color: black;
-    overflow: hidden;
-}
-
-.overallSect{
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), url('msBG.PNG');
-    background-size: cover;
-    background-position: center;
-}
-
-.sect2023{
-    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1)), url('msBG2.jpeg');
-    background-size: cover;
-    background-position: center;
-}
-
-.sect2024{
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), url('msBG3.png');
-    background-size: cover;
-    background-position: center;
-}
-
-.sect2024 .horizontaldiv, .sect2025 .horizontaldiv{
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.sect2025{
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), url('msBG4.png');
-    background-size: cover;
-    background-position: center;
-}
-
-
-.msTitle{
-    color: white;
-    padding: 10px;
-    text-align: center;
-    font-size: 30px;
-    font-weight: bolder;
-    text-shadow: 0 0 10px rgba(0,0,0,1);
-}
-
-.msPara{
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 15px;
-}
-.overallSect .msTitle, .endingSect .msTitle{
-    text-align: center;
-}
-.overallSect .msPara{
-    text-align: center;
-}
-
-.Year{
-    padding-bottom: 50px;
-}
-
-.yearText{
-    color: white;
-    text-align: center;
-    font-size: 50px;
-    font-weight: lighter;
-    opacity: 70%;
 }
 
 /*PROJECTS*/
@@ -479,13 +409,11 @@ h2{
 }
 
 .projecttab2{
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('ProjBGBE.png');
-    background-size: cover;
-    background-position: center;
+    background-color: lightgreen;
 }
 
 .projecttab3{
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('ProjBGVER.png');
+    background-color: darkblue;
 }
 
 .textbody {
@@ -509,7 +437,7 @@ h2{
     font-size: 13;
 }
 
-.PANDBtn,.BEBtn, .VERTBtn{
+.PANDBtn, .VERTBtn{
     width: 100px;
     height: 20%;
     margin: 10px;
@@ -521,7 +449,7 @@ h2{
     transition: 0.3s;
 }
 
-.PANDBtn:hover, .BEBtn:hover, .VERTBtn:hover{
+.PANDBtn:hover, .VERTBtn:hover{
     width: 150px;
     cursor: pointer;
     background-color: rgba(255,255,255,0);
@@ -545,7 +473,7 @@ h2{
 }
 
 .expTab {
-    width: 60%;
+    width: 70%;
     height: 30vh;
     background-color: midnightblue;
     color: white;
@@ -562,11 +490,8 @@ h2{
 
 
 .expTitle{
-    font-size: 25px;
+    font-size: 40px;
     text-shadow: 0 0 10px rgba(255,255,140,1)
-}
-.expBody{
-    font-size: 12px;
 }
 
 .posTitle{
@@ -620,23 +545,6 @@ h2{
     padding-left: 10px;
 }
 
-.posImgRow{
-    width: 75%;
-    gap: 10px;
-    display: flex;
-    flex-direction: row;
-    overflow-x: scroll;
-    padding: 10px;
-}
-
-.posImage{
-    flex: 1;
-    width: 250px;
-    height: 175px;
-    background-size: cover;
-    background-position: center;
-}
-
 .dropArrow{
     width: 50px;
     height: 50px;
@@ -655,8 +563,6 @@ h2{
     flex-direction: column;
     align-content: center;
     align-items: center;
-    justify-content: center;
-    text-align: center;
 }
 .contactHeader{
     color: white;
@@ -678,7 +584,6 @@ h2{
 
 .contactDetail{
     color: #c8c8c8;
-    text-align: center;
 }
 
 .gitBtn{
@@ -764,29 +669,23 @@ footer{
     .slogan, .subslogan{
         font-size: 15;
     }
-
-    .image{
-        height: 150px;
-    }
-
-    .abtdiv{
-        height: 130vh;
-    }
-
+    
     .abtsect{
         overflow-y: scroll;
         scroll-behavior: smooth;
-        padding: 10px;
-        flex-direction: column;
-    }
-
-    .abtsect .abtTab{
-        width: 80%;
+        padding: 20px;
     }
     
     .abtpara{
         padding: 0;
         font-size: 15px;
+    }
+    
+    .milestoneHeader{
+        font-size: 30;
+    }
+    .milestonePara{
+        font-size: 12;
     }
     
     .textbody{
@@ -827,26 +726,18 @@ footer{
     .posBody{
         font-size: 13;
     }
-
-    .dropArrow{
-        width: 20px;
-        height: 20px;
-    }
     
 }
 
 @media(max-width: 500px){
-    .nametitle{
-        font-size: 40;
+    .abtpara{
+        font-size: 12px;
     }
-    .slogan, .subslogan{
-        font-size: 12;
-    }
-
+    
     .aboutme{
-        height: 950vh;
+        height: 650vh;
     }
-
+    
     .logosect{
         display: flex;
         flex-direction: column;
@@ -857,13 +748,6 @@ footer{
     }
     
     .posBody{
-        font-size: 10;
-    }
-
-    .expTitle{
-        font-size: 15;
-    }
-    .expBody{
         font-size: 10;
     }
 }
