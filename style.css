@@ -231,7 +231,7 @@ h2{
 }
 
 .abtsect .abtTab{
-    width: 50%;
+    width: 35%;
 }
 
 .abtTab:hover{
@@ -298,6 +298,8 @@ h2{
     width: 100px;
     padding: 10px;
 }
+
+
 
 .logosect{
     display: flex;
