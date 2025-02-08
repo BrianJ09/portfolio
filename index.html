@@ -1,0 +1,472 @@
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <title>BrianJ's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Generator" content="Cocoa HTML Writer">
+    <meta name="CocoaVersion" content="2487.6">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <header>
+      <a href="#home">
+        <img src="brianJlogonobg.png" class="weblogo">
+      </a>
+      <div class="navbar" id="navbar">
+        <nav>
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul id="Links">
+            <li><a href="#home">HOME</a></li> 
+            <li><a href="#abtme">ABOUT ME</a></li>
+            <li><a href="#proj">PROJECTS</a></li>
+            <li><a href="#exp">EXPERIENCE</a></li>
+            <li><a href="#cont">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </header>
+    <section class="home" id="home">
+      <div class="image-grid">
+        <div class="image-row">
+          <div class="image" style="background-image: url('HomeImage1.PNG');"></div>
+          <div class="image" style="background-image: url('HomeImage3.jpeg');"></div>
+          <div class="image" style="background-image: url('HomeImage5.PNG');"></div>
+        </div>
+        <div class="image-row">
+          <div class="image" style="background-image: url('HomeImage2.jpeg');"></div>
+          <div class="image" style="background-image: url('HomeImage4.jpeg');"></div>
+          <div class="image" style="background-image: url('HomeImage6.jpeg');"></div>
+        </div>
+        <div class="image-row">
+          <div class="image" style="background-image: url('HomeImage7.PNG');"></div>
+          <div class="image" style="background-image: url('HomeImage9.jpeg');"></div>
+          <div class="image" style="background-image: url('HomeImage11.png');"></div>
+        </div>
+        <div class="image-row">
+          <div class="image" style="background-image: url('HomeImage8.jpeg');"></div>
+          <div class="image" style="background-image: url('HomeImage10.jpeg');"></div>
+          <div class="image" style="background-image: url('HomeImage12.jpeg');"></div>
+        </div>
+      </div>
+      <h1 class="nametitle" data-text="BRIAN JOSEPH"></h1>
+      <p class="slogan" data-text="BRINGING GAME DEVELOPMENT CLOSER TO CHARITY"></p>
+      <p class="subslogan" data-text="ONE GAME AT A TIME"></p>
+
+      <script>
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+              
+          function decryptEffect(element, finalText) {
+              let iterations = 0;
+              
+              function animate() {
+                  element.innerText = finalText.split("")
+                      .map((char, index) => {
+                          if (index < iterations) {
+                              return finalText[index];
+                          }
+                          return chars[Math.floor(Math.random() * chars.length)];
+                      })
+                      .join("");
+                      
+      
+                  if (iterations < finalText.length) {
+                    if (element.classList.contains("slogan")) {
+                      iterations ++;
+                      setTimeout(animate, 40)
+                    } else {
+                      iterations++;
+                      setTimeout(animate, 100);
+                    }
+                  }
+              }
+              
+              setTimeout(() => {
+                  element.innerText = "".padStart(finalText.length, " ");
+                  animate();
+              }, 1000);
+          }
+          
+          document.querySelectorAll(".nametitle, .slogan, .subslogan").forEach(element => {
+              const finalText = element.getAttribute("data-text");
+              decryptEffect(element, finalText);
+        });
+      </script>
+    </section>
+    <section class="aboutme" id="abtme">
+      <div class="abtdiv">
+        <h2>THINKER. CREATOR. LEADER.</h2>
+        <div class="abtTab">
+          <h4 class="tabHeader">Meet the Creator</h4>
+          <p class="tabPara">I’m Brian Joseph, a passionate game developer driven by innovation in game design. With 6 years in the industry, I’ve embraced the limitless potential of game development—where imagination transforms into virtual worlds.</p>
+        </div>
+        <div class="abtsect">
+          <div class="abtTab">
+            <h4 class="tabHeader">Powering Creativity</h4>
+            <p class="tabPara">Game development has shaped my creative mindset, pushing boundaries and redefining what’s possible. From storytelling to mechanics, I thrive on bringing fresh, immersive experiences to life.</p>
+          </div>
+          <div class="abtTab">
+            <h4 class="tabHeader">Vision</h4>
+            <p class="tabPara">As an aspiring leader, I founded VERTEXIS, a company dedicated to collaborating with like-minded developers to use games for good. Join us on this journey—check out our website below!</p>
+          </div>
+        </div>
+      </div>
+      <div class="skillsdiv">
+        <div class="horizontaldiv"></div>
+        <h2 class="skillstitle">SKILLS</h2>
+        <p class="skillspara">PROFICIENT IN</p>
+        <div class="logos">
+          <div class="logosect">
+            <div class="logodiv">
+              <img src="LuaLogo.png" class="logo">
+              <p class="logoTitle">LUA</p>
+            </div>
+            <div class="logodiv">
+              <img src="cSLogo.png" class="logo">
+              <p class="logoTitle">C#</p>
+            </div>
+            <div class="logodiv">
+              <img src="pyLogo.png" class="logo">
+              <p class="logoTitle">PYTHON</p>
+            </div>
+          </div>
+          <div class="logosect">
+            <div class="logodiv">
+              <img src="unityLogo.png" class="logo">
+              <p class="logoTitle">UNITY</p>
+            </div>
+            <div class="logodiv">
+              <img src="robloxstudioLogo.png" class="logo">
+              <p class="logoTitle">ROBLOX STUDIO</p>
+            </div>
+            <div class="logodiv">
+              <img src="swiftLogo.png" class="logo">
+              <p class="logoTitle">SWIFT</p>
+            </div>
+          </div>
+          <div class="logosect">
+            <div class="logodiv">
+              <img src="htmlLogo.png" class="logo">
+              <p class="logoTitle">HTML 5</p>
+            </div>
+            <div class="logodiv">
+              <img src="cssLogo.png" class="logo">
+              <p class="logoTitle">CSS</p>
+            </div>
+          </div>
+          <p class="skillspara">DEVELOPING ON</p>
+          <div class="logosect">
+            <div class="logodiv">
+              <img src="sqlLogo.png" class="logo">
+              <p class="logoTitle">SQL</p>
+            </div>
+            <div class="logodiv">
+              <img src="cppLogo.png" class="logo">
+              <p class="logoTitle">C++</p>
+            </div>
+            <div class="logodiv">
+              <img src="unrealengineLogo.png" class="logo">
+              <p class="logoTitle">Unreal Engine</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="milestonediv">
+        <div class="milestonesect">
+          <div class="horizontaldiv"></div>
+          <h2>MILESTONES</h2>
+          <div class="milestone-2023">
+            <h3 class="milestoneHeader">UNITY BOOTCAMP</h3>
+            <p class="milestonePara">5-Day Unity Bootcamp focusing on Unity Fundamentals - Course Graduate</p>
+          </div>
+          <div class="milestone-2024">
+            <div class="verticaldiv"></div>
+            <h3 class="milestoneHeader">SWIFT ACCELERATOR PROGRAMME</h3>
+            <p class="milestonePara">8-Month intensive app development programme - Course Graduate</p>
+            <div class="verticaldiv"></div>
+            <h3 class="milestoneHeader">SENTINEL PROGRAMME</h3>
+            <p class="milestonePara">Hacking competition hosted by Digitial Intelligence Service of SAF - Participant</p> 
+            <div class="verticaldiv"></div>
+            <h3 class="milestoneHeader">1,000 Visits</h3>
+            <p class="milestonePara">My latest game creation, PANDEMONIUM, has been played more than 1,000 times</p>
+          </div>
+        </div>  
+      </div> -->
+      <div class="milestonediv">
+        <div class="overallSect">
+          <h5 class="msTitle">From Dreams to Reality</h5>
+          <p class="msPara">The milestones I've achieved over the years</p>
+        </div>
+        <div class="sect2023">
+          <div class="Year">
+            <h5 class="yearText">2023</h5>
+          </div>
+          <h5 class="msTitle">Unity Bootcamp</h5>
+          <p class="msPara">Learnt C# programming and Unity game development fundamentals. Bootcamp hosted by Tinkercademy</p>
+        </div>
+        <div class="sect2024">
+          <div class="Year">
+            <h5 class="yearText">2024</h5>
+          </div>
+          <h5 class="msTitle">Swift Accelerator Programme Course Alumnus</h5>
+          <p class="msPara">Finished an intensive 8-month app development programme, ultimately publishing FitStreak(AppStore), which improves your workout habits by featuring daily challenges and more!</p>
+          <div class="horizontaldiv"></div>
+          <h5 class="msTitle">Sentinel Programme Participant</h5>
+          <p class="msPara">Competed in the Digital & Intelligence Services-hosted hacking competiton where I applied SQL database handling</p>
+        </div>
+        <div class="sect2025">
+          <div class="Year">
+            <h5 class="yearText">2024-2025</h5>
+          </div>
+            <h5 class="msTitle">2-Day Game Development Workshop</h5>
+            <p class="msPara">Proud to have been able to share my knowledge of game design and programming to the my secondary school schoolmates. Instructed a 2-day workshop on Roblox Studio and Lua Programming</p>
+            <div class="horizontaldiv"></div>
+            <h5 class="msTitle">1,200 Supporters and Growing</h5>
+            <p class="msPara">My latest game, PANDEMONIUM, garnered over 1,200 players worldwide for its early access version</p>
+        </div>
+        <div class="endingSect">
+          <h5 class="msTitle">And so much more awaits.</h5>
+          <p class="msPara"></p>
+        </div>
+      </div>
+    </section>
+    <section class="projects" id="proj">
+      <div class="horizontaldiv"></div>
+      <h2 class="projSectTitle">PROJECTS</h2>
+      <div class="projecttab1">
+        <div class="textbody">
+          <h3 class="projectTitle">PANDEMONIUM(1.2K Visits)</h3>
+          <p class="projectBody">Pandemonium is a fighter-horror game on Roblox featuring story and endless modes. Currently, only early access has been released with a total of more than 1000 plays.</p>
+          <a href="https://www.roblox.com/games/16842223113/PANDEMONIUM#!/game-instances">
+            <button class="PANDBtn">PLAY NOW</button>
+          </a>
+        </div>
+      </div>
+      <div class="projecttab2">
+        <div class="textbody">
+          <h3 class="projectTitle">BREATHE EASY</h3>
+          <p class="projectBody">Breathe Easy is a downloadable tool that you can use to improve your breathing habits. Following research of the most optimal breathing times, BreatheEasy gives you visual cues &amp; relaxing music to enjoy listening to while you are cultivating important breathing habits.</p>
+          <a id="downloadButton">
+            <button class="BEBtn" id="downloadText">Checking OS, Do Not Click</button>
+          </a>
+        </div>
+      </div>
+      <div class="projecttab3">
+        <div class="textbody">
+          <h3 class="projectTitle">VERTEXIS Website</h3>
+          <p class="projectBody">Made from scratch, using HTML, CSS and JS. Visit VERTEXIS' website to find out more!</p>
+          <a href="https://vertexis-official.github.io/web">
+            <button class="VERTBtn">VISIT WEBSITE</button>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="experience" id="exp">
+      <div class="horizontaldiv"></div>
+      <h2>EXPERIENCE</h2>
+      <div class="expTab">
+        <h3 class="expTitle">Coding Immersive Experiences for more than 6 years</h3>
+        <p class="expBody">With over 1000 players and an engaged community, my technical and creative skills have interlocked to bring out the best games that I can offer. Over these years, my passion for game development and programming has only grown to become a significant part of me.</p>
+        <p class="timelineText">SINCE 2018</p>
+      </div>
+      <div class="positionsTab">
+        <h3 class="posTitle">POSITIONS</h3>
+        <div class="dropDownLabel">
+          <div class="posDiv">
+            <p class="dropTitle">Game Development/Computing</p>
+            <div class="posBody">
+              Owner of Startup Game Development Company, Vertexis(&gt;2018) <br> 
+              Roblox Studio 2-Day Beginner Course Instructor(2024) <br> 
+              Swift Accelerator Programme Alumnus(&gt;2024) <br>  
+              Sentinel Programme Participant(2024) <br>
+              <div class="posImgRow">
+                <img class="posImage" src="PosImageCO1.png">
+                <img class="posImage" src="PosImageCO2.png">
+                <img class="posImage" src="PosImageCO3.png">
+                <img class="posImage" src="PosImageCO4.png">
+                <img class="posImage" src="PosImageCO5.png">
+                <img class="posImage" src="PosImageCO6.png">
+                <img class="posImage" src="PosImageCO7.png">
+              </div>
+            </div>
+          </div>
+          <img src="whiteArrow.webp" class="dropArrow">
+        </div>
+        <div class="dropDownLabel">
+          <div class="posDiv">
+            <p class="dropTitle">St. Patrick's School Singapore Student Council(SC)</p>
+            <div class="posBody">
+              Vice President(2024-2025) <br> 
+              Secondary-1 Orientation OIC(2024)
+              <div class="posImgRow">
+                <img class="posImage" src="PosImageSC1.png">
+                <img class="posImage" src="PosImageSC2.png">
+                <img class="posImage" src="PosImageSC3.png">
+              </div>
+            </div>
+          </div> 
+          <img src="whiteArrow.webp" class="dropArrow">
+        </div>
+        <div class="dropDownLabel">
+          <div class="posDiv">
+            <p class="dropTitle">National Cadet Corps(NCC)(Land)</p>
+            <div class="posBody">
+              Company Sergeant Major(2023-2024) <br> 
+              Senior Specialist Leadership Course Graduate(2024) <br> 
+              Free-Style-Drill(FSD) Basic Instructor Course Graduate(2023) <br> 
+              FSD School Team OIC(2023-2024) 
+              <div class="posImgRow">
+                <img class="posImage" src="PosImageNC1.png">
+                <img class="posImage" src="PosImageNC2.png">
+                <img class="posImage" src="PosImageNC3.png">
+              </div>
+            </div>
+          </div>
+          <img src="whiteArrow.webp" class="dropArrow">
+        </div>
+        <div class="dropDownLabel">
+          <div class="posDiv">
+            <p class="dropTitle">St. Patrick's School Singapore Legion Of Mary</p>
+            <div class="posBody">
+              Praesidium Vice President(2023-2025)
+              <!-- <div class="posImgRow">
+                <img class="posImage" src="">
+                <img class="posImage" src="">
+              </div> -->
+            </div>
+          </div>
+          <img src="whiteArrow.webp" class="dropArrow">
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="cont">
+      <div class="horizontaldiv"></div>
+      <h2 class="contactHeader">CONTACT</h2>
+      <div class="contactinfotab">
+        <h3 class="contactTitle">EMAIL</h3>
+        <p class="contactDetail">bbrian.josephh@gmail.com <br> brian_joseph@students.edu.sg</p>
+        <div class="horizontaldiv"></div>
+        <a href="https://github.com/Vertexis-Official">
+          <button class="gitbtn">VERTEXIS GITHUB</button>
+        </a>
+      </div>
+    </section>
+    <footer>
+      <a href="#home">
+        <img src="brianJlogonobg.png" class="weblogo">
+      </a>
+    </footer>
+  </body>
+  
+</html>
+
+<script>
+    var navbar = document.getElementById("navbar")
+    var ul = document.getElementbyId("Links")
+
+    function showMenu(){
+        navbar.style.top = "0"
+    }
+    function hideMenu(){
+        navbar.style.top = "-200vh"
+    }
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownLabels = document.querySelectorAll(".dropDownLabel");
+  var counter = 0;
+
+  dropdownLabels.forEach(label => {
+    const body = label.querySelector(".posBody");
+    const exp = document.getElementById("exp");
+    const arrow = label.querySelector(".dropArrow");
+
+    label.addEventListener("click", function () {
+      const isOpen = body.classList.contains("open");
+      
+      if (isOpen) {
+        counter = counter - 1
+        label.style.height = "70px";
+        exp.style.height = "120vh";
+        body.classList.remove("open");
+        body.style.height = "0px";
+        body.style.display = "none";
+        arrow.style.transform = "rotate(0deg)";
+        if (counter == 0) {
+          exp.style.height = "120vh";
+        }else if(counter <= 2) {
+          exp.style.height = "220vh";
+        }else if(counter <= 4) {
+          exp.style.height = "320vh";
+        }
+      } else {
+        counter ++
+        label.style.height = "400px";
+        body.classList.add("open");
+        body.style.display = "block";
+        body.style.height = `${body.scrollHeight}px`;
+        arrow.style.transform = "rotate(180deg)";
+        if (counter == 0) {
+          exp.style.height = "120vh";
+        }else if(counter <= 2) {
+          exp.style.height = "220vh";
+        }else if(counter <= 4) {
+          exp.style.height = "320vh";
+        }
+      }
+    });
+  });
+});
+
+</script>
+
+<script>
+  document.addEventListener("mousemove", (e) => {
+    const rows = document.querySelectorAll(".image-row");
+    const cursorX = e.clientX / window.innerWidth;
+
+    rows.forEach((row, index) => {
+      const speed = (index % 2 === 0 ? 1 : -1) * 30;
+      const offset = cursorX * speed;
+      row.style.transform = `translateX(${offset}px)`;
+    });
+  });
+</script>
+
+<script>
+  const downloadLinks = {
+      "Windows": "https://drive.google.com/file/d/1f6TJbdTRBje3N8I_jw4gASlxov12ghU-/view?usp=sharing",
+      "Mac": "https://drive.google.com/file/d/1gmyQ-ci-ISOqBVP0rWtcGlvFts5ixmfW/view?usp=sharing",
+      "Linux": "https://drive.google.com/file/d/1x_aMAMm3sVsa227zjd6m7U_hdMM9EF91/view?usp=sharing"
+  };
+
+  function detectOS() {
+      let userAgent = navigator.userAgent;
+      let downloadButton = document.getElementById("downloadButton");
+      let downloadText = document.getElementById("downloadText")
+
+      if (userAgent.indexOf("Win") !== -1) {
+          downloadText.innerText = "DOWNLOAD FOR WINDOWS";
+          downloadButton.onclick = () => window.open(downloadLinks["Windows"], "_blank");
+      } else if (userAgent.indexOf("Mac") !== -1) {
+          downloadText.innerText = "DOWNLOAD FOR MAC";
+          downloadButton.onclick = () => window.open(downloadLinks["Mac"], "_blank");
+      } else if (userAgent.indexOf("Linux") !== -1) {
+          downloadText.innerText = "DOWNLOAD FOR LINUX";
+          downloadButton.onclick = () => window.open(downloadLinks["Linux"], "_blank");
+      } else {
+          downloadText.innerText = "Download Unavailable";
+          downloadText.disabled = true;
+          downloadText.style.backgroundColor = "gray";
+          downloadText.style.cursor = "not-allowed";
+      }
+  }
+
+  window.onload = detectOS;
+</script>
+
