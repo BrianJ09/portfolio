@@ -483,8 +483,14 @@ h2{
     margin-bottom: 20px;
 }
 
-.sect2025{
+.sect2024-2025{
     background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), url('msBG4.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.sect2025{
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), url('msBG5.png');
     background-size: cover;
     background-position: center;
 }
