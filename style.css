@@ -451,7 +451,7 @@ h2{
     flex-direction: column;
 }
 
-.overallSect, .sect2023, .sect2024, .sect2025, .endingSect{
+.overallSect, .sect2023, .sect2024, .sect202425, .sect2025, .endingSect{
     min-height: 100vh;
     align-content: center;
     position: sticky;
@@ -478,7 +478,7 @@ h2{
     background-position: center;
 }
 
-.sect2024 .horizontaldiv, .sect2025 .horizontaldiv{
+.sect2024 .horizontaldiv, .sect202425 .horizontaldiv{
     margin-top: 20px;
     margin-bottom: 20px;
 }
