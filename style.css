@@ -390,62 +390,9 @@ h2{
     box-shadow: 0 0 25px rgba(0,0,255,1);
 }
 
-
-/*MILESTONES*/
-/* .milestonediv{
-    display: flex;
-    align-items: flex-start;
-    position: relative;
-    height: 310vh;
-    width: 100%;
-}
-
-.milestonesect{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-
-.milestone-2023, .milestone-2024{
-    background-size: contain;
-    background-position: center;
-    text-align: center;
-    align-content: center;
-}
-
-.milestone-2023{
-    height: 50vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.4)), url(milestoneBG2.png);
-}
-
-.milestone-2024{
-    height: 260vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,1)), url(milestoneBG1.png);
-}
-
-.verticaldiv{
-    background-color: white;
-    height: 500px;
-    width: 1px;
-    text-align: center;
-    margin: auto;
-}
-
-.milestoneHeader{
-    font-weight: 800;
-    font-size: 50px;
-    color: white;
-}
-
-.milestonePara{
-    color: white
-} */
-
+/* MILESTONES */
 .milestonediv{
-    height: 500vh;
+    height: 600vh;
     width: 100%;
     display: flex;
     flex-direction: column;
