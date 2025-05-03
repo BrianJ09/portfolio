@@ -405,7 +405,7 @@ h2{
 }
 
 .overallSect{
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), url('msBG.PNG');
+    background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0)), url('msBG.PNG');
     background-size: cover;
     background-position: center;
 }
@@ -676,7 +676,7 @@ h2{
 /*CONTACT*/
 .contact{
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url(WEBbg4.png);
     background-size: contain;
     background-position: center;
@@ -708,6 +708,7 @@ h2{
 .contactDetail{
     color: #c8c8c8;
     text-align: center;
+    width: 100%;
 }
 
 .gitBtn{
@@ -798,6 +799,10 @@ footer{
         height: 150px;
     }
 
+    .aboutme{
+        height: 1035vh;
+    }
+
     .abtdiv{
         height: 130vh;
     }
@@ -821,9 +826,13 @@ footer{
     .textbody{
         width: 80%;
     }
+
+    .vertDiv{
+        height: 110vh;
+    }
     
     .projectTitle{
-        font-size: 20;
+        font-size: 15;
     }
     
     .projectBody{
@@ -838,7 +847,7 @@ footer{
     }
     
     .contact{
-        height: 65vh;
+        height: 80vh;
     }
     
     .contactinfotab{
@@ -873,7 +882,7 @@ footer{
     }
 
     .aboutme{
-        height: 950vh;
+        height: 1150vh;
     }
 
     .logosect{
@@ -887,6 +896,22 @@ footer{
     
     .posBody{
         font-size: 10;
+    }
+
+    .tabPara{
+        font-size: 10;
+    }
+
+    .msTitle{
+        font-size: 20;
+    }
+
+    .msPara{
+        font-size: 12;
+    }
+
+    .expTab{
+        width: 90%;
     }
 
     .expTitle{
